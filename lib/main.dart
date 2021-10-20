@@ -27,26 +27,19 @@ class MyApp extends StatelessWidget {
 
 class MainPage extends StatelessWidget {
   @override
-  Widget build(BuildContext context) =>
-      Scaffold(
+  Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           title: Text('Navigation over screens'),
         ),
         body: Container(
           child: Column(
             children: <Widget>[
-              // Navigate using declared route name
-              RaisedButton(
-                onPressed: () => Navigator.pushNamed(context, '/second'),
-                child: Text('Navigate using routes'),
-              ),
               // Navigate using simple push method
               RaisedButton(
-                onPressed: () =>
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => SecondPage()),
-                    ),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SecondPage()),
+                ),
                 child: Text('Navigate using push method'),
               )
             ],
